@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>Spot Found</title>
+</head>
+<style>
+    body {
+      background-image: url(images/Yes_Gauchetiere_AI.png);
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+    }
+
+    .top-container {
+
+display: grid;
+grid-template-columns: 800px 1fr;
+grid-template-rows:  200px 1fr;
+float: right;
+background-color: lightblue;
+opacity: 0.8;
+margin-top: 15px;
+
+
+border-radius: 25px;
+
+
+}
+
+.message {
+text-align: center;
+}
+
+  
+    
+    
+  </style>
+</head>
+<body>
+  <div class="top-container">
+    <div>
+      <h1 class="message">We found a spot for you!</h1>
+      <a href="map.html">
+      <h2 style="text-align: center;">
+      <script>
+            let adressName = localStorage.getItem("adressName");
+
+      document.write(adressName);
+      </script>
+      </h2> 
+      </a>
+      
+      <h2 style="text-align: center;">
+        Results: 2/2 Found
+      </h2>
+      </div>
+      
+     
+    </div>
+  </div>  
+
+  
+  
+</body>
+</html>

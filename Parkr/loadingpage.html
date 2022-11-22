@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    
+</head>
+<body>
+
+    <style>
+        body {
+            background-image: url(images/Background.png);
+            font-family: 'Roboto', sans-serif;
+            margin-top: 0px; 
+            margin-bottom: 0px; 
+            margin-left: 0px; 
+            margin-right: 0px;
+            font-size: 14pt;
+        }
+
+        .center {
+            display: block;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+
+        }
+        
+    
+        .dino{
+ 
+            max-width: 150px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+        .center:after{
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: bottom;
+            -webkit-animation: ellipsis steps(4, end) 1500ms infinite;
+            animation: ellipsis steps(4, end) 1500ms infinite;
+            content: "\2026";
+            /* ascii code for the ellipsis character */
+            width: 0px;
+        }
+
+        @keyframes ellipsis {
+            to {
+                width: 40px;
+            }
+        }
+
+        @-webkit-keyframes ellipsis {
+            to {
+                width: 40px;
+            }
+        }
+
+
+
+    </style>
+
+    <div id="dino"><img class="dino" src="images/train.gif" alt="dino-running-gif">
+    </dino>   
+    <div class="center">
+            Finding public parking spots near
+            <script>
+                let adressName = localStorage.getItem("adressName");
+                document.write(adressName);
+                var timer = setTimeout(function() {
+                window.location='foundSpotPrompt.html'
+                }, 5000);
+            </script>
+
+        
+        
+    </div>
+  
+</body>
+</html>
+

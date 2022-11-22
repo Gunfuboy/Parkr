@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css" />
+        <script src="https://unpkg.com/leaflet-geosearch@3.1.0/dist/geosearch.umd.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI9fOaYs72SAWyniOjPRwmZWzCrn7QFlw&libraries=places&callback=initAutocomplete" async defer></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="auto-complete.js"></script>
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="icon" href="favicon.ico">
+
+        <title>Parkr</title>
+
+        <style>
+            body {
+                background-image: url(images/Background.png);
+            }
+        </style>
+        
+    </head>
+        
+        <body>
+            
+            <div class="search">
+
+                <div class="topnav">
+                    <a class="active" href="peter.html">Become a Peter</a>
+                    <a href="french.html"class="split">En/Fr</a>
+                    <a href="signup.html"class="split">Sign Up</a>
+                    <a href="login.html"class="split">Log In</a>
+                </div>
+    
+                <div class="logo">
+                    <img src="images/Parkr.png" alt="Parkr">
+                </div>
+    
+                <h1>Find a nearby parking space</h1>
+            
+                <input  class="search-bar" id="autocomplete" placeholder="Enter your address..."  type="text" >
+                
+                <a class="submit-button" onclick="submitparkr()" href="loadingpage.html">
+                    Submit
+                </a> 
+            </div>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI9fOaYs72SAWyniOjPRwmZWzCrn7QFlw&libraries=places&callback=initAutocomplete" async defer></script>
+
+            <script>
+                function submitparkr(){
+                    localStorage.setItem("adressName",document.getElementById('autocomplete').value);
+                }
+            </script>            
+
+        </body>      
+
+</html>
